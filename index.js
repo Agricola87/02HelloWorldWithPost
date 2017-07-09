@@ -1,15 +1,15 @@
 const express = require('express')
 const app = express()
-html = `
+var html = `
 <form action="/form_handler" method="POST">
 <input type="submit" value="Want to see Hello World" />
 </form>
 `
-html2 = "<p>Hello World"
+var html2 = "<p>Hello World"
 
 app.get('/', function (req, res) {
   res.send(html)
-})
+}) 
 
 app.post('/form_handler', function (req, res) {
   res.send(html2)
